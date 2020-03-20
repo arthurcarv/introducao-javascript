@@ -10,15 +10,98 @@
 
   <body>
     <header>
-
+      <div class="container">
+        <h2 class="title">Aparecida Nutrição</h2>
+      </div>
     </header>
 
     <main>
+      <section class="container">
+        <h2>Meus Pacientes</h2>
+        <label for="table-filter">Filtre:</label>
+        <input type="text" name="filter" id="table-filter" placeholder="Digite o nome do paciente">
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Peso(kg)</th>
+              <th>Altura(m)</th>
+              <th>Gordura Corporal(%)</th>
+              <th>IMC</th>
+            </tr>
+          </thead>
+          <tbody id="pacients-table">
+            <tr class="pacient" id="first-pacient">
+              <td class="info-name">Paulo</td>
+              <td class="info-weight">100</td>
+              <td class="info-height">2.00</td>
+              <td class="info-bodyfat">10</td>
+              <td class="info-imc">0</td>
+            </tr>
 
+            <tr class="pacient">
+              <td class="info-name">João</td>
+              <td class="info-weight">80</td>
+              <td class="info-height">1.72</td>
+              <td class="info-bodyfat">40</td>
+              <td class="info-imc">0</td>
+            </tr>
+
+            <tr class="pacient">
+              <td class="info-name">Erica</td>
+              <td class="info-weight">54</td>
+              <td class="info-height">1.64</td>
+              <td class="info-bodyfat">14</td>
+              <td class="info-imc">0</td>
+            </tr>
+
+            <tr class="pacient">
+              <td class="info-name">Douglas</td>
+              <td class="info-weight">85</td>
+              <td class="info-height">1.73</td>
+              <td class="info-bodyfat">24</td>
+              <td class="info-imc">0</td>
+            </tr>
+
+            <tr class="pacient">
+              <td class="info-name">Tatiana</td>
+              <td class="info-weight">46</td>
+              <td class="info-height">1.55</td>
+              <td class="info-bodyfat">19</td>
+              <td class="info-imc">0</td>
+            </tr>
+          </tbody>
+        </table>
+        <span id="ajax-error" class="invisible">Erro ao buscar os pacientes</span>
+
+        <button id="search-pacients" class="button main-btn">Buscar Pacientes</button>
+
+      </section>
     </main>
 
-    <section>
-      
+    <section class="container">
+      <h2 id="title-form">Adicionar novo paciente</h2>
+      <ul id="error-message"></ul>
+      <form id="form-add">
+        <div class="">
+          <label for="name">Nome:</label>
+          <input id="name" type="text" name="name" placeholder="Digite o nome do seu paciente" class="field">
+        </div>
+        <div class="group">
+          <label for="weight">Peso:</label>
+          <input id="weight" type="text" name="weight" placeholder="Digite o peso do seu paciente" class="field mid-field">
+        </div>
+        <div class="group">
+          <label for="height">Altura:</label>
+          <input id="height" type="text" name="height" placeholder="Digite a altura do seu paciente" class="field mid-field">
+        </div>
+        <div class="group">
+          <label for="bodyfat">Peso:</label>
+          <input id="bodyfat" type="text" name="bodyfat" placeholder="Digite a porcentagem de gordura do seu paciente" class="field mid-field">
+        </div>
+
+        <button id="add-pacient" class="button main-btn"></button>
+      </form>
     </section>
   </body>
 
