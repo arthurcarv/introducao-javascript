@@ -1,25 +1,25 @@
-var fieldFilter = document.querySelector("#table-filter");
+var campoFiltro = document.querySelector("#filtrar-tabela");
 
-fieldFilter.addEventListener("input", function () {
-    var pacients = document.querySelectorAll(".pacient");
+campoFiltro.addEventListener("input", function() {
+    var pacientes = document.querySelectorAll(".paciente");
 
-    if(this.value.length > 0) {
-        for (var i = 0; i < pacients.length; i++) {
-            var pacient = pacients[i];
-            var tdName = pacient.querySelector(".info-name");
-            var name = tdName.textContent;
-            var expression = new RegExp(this.value, "i");
+    if (this.value.length > 0) {
+        for (var i = 0; i < pacientes.length; i++) {
+            var paciente = pacientes[i];
+            var tdNome = paciente.querySelector(".info-nome");
+            var nome = tdNome.textContent;
+            var expressao = new RegExp(this.value, "i");
 
-            if (!expression.test(nome)) {
-                pacient.classList.add("invisible");
+            if (!expressao.test(nome)) {
+                paciente.classList.add("invisivel");
             } else {
-                pacient.classList.remove("invisible");
+                paciente.classList.remove("invisivel");
             }
         }
     } else {
-        for (var i = 0; i < pacients.length; i++) {
-            var pacient = pacients[i];
-            pacient.classList.remove("invisible");
+        for (var i = 0; i < pacientes.length; i++) {
+            var paciente = pacientes[i];
+            paciente.classList.remove("invisivel");
         }
     }
-})
+});
