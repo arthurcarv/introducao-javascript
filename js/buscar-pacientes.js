@@ -1,5 +1,5 @@
-var addButton = document.querySelector("#search-pacients");
-addButton.addEventListener("click". function () {
+var searchButton = document.querySelector("#search-pacients");
+searchButton.addEventListener("click". function () {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "https://api-pacientes.herokuapp.com/pacientes");
     xhr.addEventListener("load", function () {
