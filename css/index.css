@@ -55,7 +55,7 @@ section h2{
 table{
 	width: 100%;
 	margin-bottom : .5em;
-  table-layout: fixed;
+  	table-layout: fixed;
 }
 
 td, th{
@@ -122,8 +122,8 @@ button[disabled=disabled], button:disabled {
   background-color: gray;
 	border-color: darkgray;
 }
-// ou # //
-.add-pacient{
+
+#add-pacient{
   margin-top: 30px;
 }
 
